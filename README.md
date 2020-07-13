@@ -276,6 +276,18 @@ In the oeda directory:
 In the phoenix_pipeline directory perform the usual steps to create & activate the virtual environment, then pip install -r requirements.txt.
 
 
+### Edit the Config File
+
+The pipeline will process events on a per-day basis by checking the date fields of the stories in MongoDB.
+To process events for a particular day we need to specify that day in the config file.
+
+
+In the file `PHOX_config.ini` :
+
+`run_date = 20200713`
+
+NOTE: To process events on the same day they were collected, set the run_date to today's date plus one day.
+
 ### Do a Test Run of the Pipeline
 
 ```python pipeline.py```
